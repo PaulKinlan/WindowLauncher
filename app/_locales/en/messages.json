@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Layout Tester",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Helps you quickly test sites in different screen resolution",
+    "description": "The description of the application"
+  }
+}

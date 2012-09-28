@@ -1,0 +1,13 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+
+body {
+  position: absolute;
+  color: white;
+  top: 0;
+  bottom: 0;
+  font-family: 'Helvetica Neue', 'Helvetica';
+  padding: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
+}

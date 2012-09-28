@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="mobiletesterApp" ng-csp>
+    <head>
+        <meta charset="utf-8">
+        <title>Appmator</title>
+        <!-- build:css styles/app.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/index.css">
+        <!-- endbuild -->
+        <script src="index.js"></script>
+        <script src="scripts/vendor/AngularJS/angular.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/add.js"></script>
+    </head>
+    <body ng-controller="MainCtrl" ng-init="configurations = []; url='';">
+      <section> 
+        <ul>
+          <li ng-repeat="config in configurations">
+            <div>
+              <div>{{config.name}}</div>
+              <span>{{config.width}}x{{config.height}}</span>
+              <input type="checkbox" ng-model="config.checked" value="{{config.checked}}">
+            </div>
+          </li>
+          <li ng-controller="AddCtrl">
+            <div ng-init="width=0; height=0;" >
+              <input type="text" id="name"  ng-model="name" placeholder="Profile name" class="profilename"/>
+              <label for="width">Width</label>
+              <input type="number" id="width" ng-model="width" class="profilewidth" />
+              <label for="height">Height</label>
+              <input type="number" id="height" ng-model="height" class="profileheight" />
+              <button ng-click="addProfile()">Add</button>
+            </div>
+          </li>
+        </ul> 
+        </section>
+        <header>
+          <input type="url" id="url" ng-model="url" placeholder="Enter URL"/>
+          <button ng-click="launch()">Go</button>
+        </header>
+    </body>
+</html>
